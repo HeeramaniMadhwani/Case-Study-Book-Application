@@ -1,0 +1,21 @@
+server: 
+   port: 8089
+eureka:
+ client:
+   service-url:
+     defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+      name: BettersReads_Registration_Login
+  data:
+    mongodb:
+      uri: mongodb+srv://BookApp:bFlUSABV9ySmatff@book.l9kjh.mongodb.net/UserDatabase?retryWrites=true&w=majority
+  main:
+    allow-circular-references: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+data:
+  exception:
+    msg: User Already Exists.
+    pwdValidationMsg: Length of the password is too short, minimum length should be 8 character.
