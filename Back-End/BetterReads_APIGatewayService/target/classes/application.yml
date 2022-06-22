@@ -1,0 +1,21 @@
+server:
+  port: 8086
+eureka:
+  client:
+     service-url:
+          defaultZone: http://localhost:8761/eureka/
+          
+spring:
+   application:
+        name: BetterReads_APIGatewayService
+   cloud:
+        gateway:
+           routes:
+           - id: bookModule
+             uri: http://localhost:8085/
+             predicates:
+             - Path=/api/v1/allBooks/**
+           - id: userModule
+             uri: http://localhost:8082/
+             predicates:
+             - Path=/api/u1/allUsers/**
