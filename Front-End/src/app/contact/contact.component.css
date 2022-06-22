@@ -1,0 +1,16 @@
+header{
+    background-color:coral;
+    height: 20 vh;
+    border-bottom: 2px solid yellowgreen;
+
+}
+img{
+    height: 450px;
+    width: 800px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+ 

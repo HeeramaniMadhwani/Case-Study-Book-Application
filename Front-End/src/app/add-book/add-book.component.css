@@ -1,0 +1,36 @@
+.card{
+    border: 1px;
+    border-color:black;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-image: url('../../assets/images/createBook.jpg');
+    opacity: 0.7;
+    background-image: repeating-radial-gradient();
+  }
+  .background-image{
+       opacity: -0.2;
+  }
+  .form-control{
+      border-color: black;
+  }
+  label {
+	color:black;
+	display: block;
+	padding-bottom: 1px;
+	margin: 3px;
+    font-weight:900;
+}
+.style h4{
+    color: black;
+    font-weight: 900;
+}
+.button{
+    background-color: black;
+ font-weight: 300;
+ color:azure;
+}
+  

@@ -1,0 +1,50 @@
+
+<div class="generic-container">
+    <div class="panel panel-default">
+      <!-- Default panel contents -->
+      <div class="row">
+      
+      </div>
+      <div class="panel-heading" style="text-align: center;"><span class="lead">List of Books</span>
+      </div>
+      <div class="table-responsive tablecontainer" style="margin-left: 40px; margin-right: 40px;">
+        <table class="table table-hover">
+          <thead style="background-color:darksalmon;">
+          <tr>
+            <th>Book Id</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Price</th>
+            <th>Genre</th>
+            <th>Year</th>
+            <th style="text-align: center;">   Actions </th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let book of books">
+              <td><span>{{book.book_id}}</span></td>
+              <td><span>{{book.title}}</span></td>
+              <td><span>{{book.author}}</span></td>
+              <td><span>{{book.price}}</span></td>
+              <td><span>{{book.genre}}</span></td>
+              <td><span>{{book.year}}</span></td>
+              <td style="text-align: center;">
+                <button (click) = "updateBookRecord(book.book_id)" class="btn btn-info">Update</button>
+                <button (click) = "deleteBook(book.book_id)" class="btn btn-danger" style="margin-left: 18px;"> Delete </button>
+                <button (click) = "viewBookDetail(book.book_id)" class="btn btn-success" style="margin-left: 18px;"> View </button>
+              </td>
+            </tr>
+            </tbody>
+          </table> 
+        </div>
+        <div class="container text-center mt20">
+            <button style="color:brown;" routerLink="/add-book" class="btn btn-info"> Add New Book </button>
+        </div>
+        <div class="container text-center mt20" style="padding-top: 8px;">
+          <button class="btn btn-light" style="color:black" routerLink="/"> Go Back </button>
+      </div>
+      </div>
+    </div>
+
+    
+

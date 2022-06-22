@@ -1,0 +1,73 @@
+<h2 style="text-align: center;">Welcome to Better Reads</h2>
+<p style="color: firebrick; text-align: center;"><strong> Our Writing needs your Appreciation!</strong></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card"><br><br>
+                <div class="text-center">
+                    <h3>REGISTER HERE...</h3>
+                </div>
+                <div class="center">
+                  <form>
+                    <form [formGroup]="registerForm" (ngSubmit)="register()">
+                        <div class="mb-3 form-group">
+                            <label for="inputId" class="form-label">ID</label>
+                            <input type="number" class="form-control" name="id" id="inputId" required formControlName="id" placeholder="Enter ID">
+                            <small *ngIf="id && id.invalid && id.touched" style="color: red;"> Please enter valid ID</small>
+                            <p class="alert alert-danger" *ngIf="registerForm.controls['id'].hasError('pattern')">
+                                ID must be of 3 digits.
+                            </p> 
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="inputName" class="form-label"> Name</label>
+                            <input type="text" class="form-control" name="name" id="inputName" required formControlName="name" placeholder="Enter name">
+                            <small *ngIf="name && name.invalid && name.touched" style="color: red;"> Please enter valid name</small>
+                            <p class="alert alert-danger" *ngIf="registerForm.controls['name'].hasError('minlength')">
+                                Name must be more than 3 characters.
+                            </p> 
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="exampleInputEmail">Email Address</label>
+                            <input type="text" class="form-control" name="email" id="exampleInputEmail" required formControlName="email" placeholder="Enter email address">
+                            <small *ngIf="email && email.invalid && email.touched" style="color: red;"> Please enter valid email address</small>
+                            <p class="alert alert-danger" *ngIf="registerForm.controls['email'].hasError('pattern')">
+                                Please enter valid email address.
+                            </p> 
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="exampleInputMobileNo">Mobile Number</label>
+                            <input type="number" class="form-control" name="mobileNo" maxlength=10 
+                            id="exampleInputMobileNo" required  formControlName="mobileNo" placeholder="Enter mobile number">
+                            <small *ngIf="mobileNo && mobileNo.invalid && mobileNo.touched" style="color: red;"> Please enter valid mobile number</small>
+                            <!-- <p class="alert alert-danger" *ngIf="registerForm.controls['mobileNo'].hasError('maxlength')">
+                                Mobile number cannot exceed 10 characters.
+                            </p> -->
+                              <p class="alert alert-danger" *ngIf="registerForm.controls['mobileNo'].hasError('pattern')">
+                                Mobile number cannot exceed 10 digits.
+                            </p> 
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" name="password" id="exampleInputPassword1" required  formControlName="password" placeholder="Enter password">
+                            <small *ngIf="password && password.invalid && password.touched" style="color: red;"> Please enter valid password</small>
+                        </div>
+                        <div class="mb-3 form-group">
+                            <label for="inputRole"> Role </label>
+                            <input type="text" class="form-control" name="role" id="exampleInputRole" required formControlName="role" placeholder="Enter role">
+                            <small *ngIf="role && role.invalid && role.touched" style="color: red;"> Please enter valid role</small>
+                        </div>
+                        
+                        <button  (click)=successNotification() class="btn btn-primary">Sign Up</button>
+                      
+                    </form>
+             
+                    <a style="color: white;margin-top: 10px;" routerLink="/login">Already Registered? Click to Login!</a>
+                   <!-- <a (click) = "viewProfile(user.id)" style="color: white;margin-left: 125px;" routerLink="/users-register">View Profile</a> -->
+                  </form>
+                </div>
+                </div>
+                </div>
+                </div>
+                </div>
+                
+

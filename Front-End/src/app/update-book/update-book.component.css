@@ -1,0 +1,33 @@
+.card{
+    border: 1px;
+    border-color:black;
+    width: 500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(236, 174, 93);
+    opacity: 0.5;
+    background-image: repeating-radial-gradient();
+  }
+  .form-control{
+      border-color: black;
+  }
+  label {
+	color:black;
+	display: block;
+	padding-bottom: 1px;
+	margin: 3px;
+    font-weight:900;
+}
+.style h4{
+    color: black;
+    font-weight: 900;
+}
+.button{
+    background-color: black;
+ font-weight: 300;
+ color:azure;
+}
+  

@@ -1,0 +1,39 @@
+<h2 style="text-align: center;">Welcome to Better Reads</h2>
+<p style="color: firebrick; text-align: center;"><strong> Our Writing needs your Appreciation!</strong></p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="card"><br><br>
+              <div class="header">
+                <img src="../../assets/images/LoginLogo.jpg" alt="logo" />
+                
+              </div>
+                <div class="center">
+                <form [formGroup]="loginForm" (ngSubmit)="login()" >
+                    <div class="form-group">
+                      <label for="email">Email address</label>
+                      <input type="email" class="form-control" required name="email" formControlName="email" placeholder="Enter email address">
+                      <span *ngIf="email && email.invalid && email.touched" style="color: red;"> Input is not valid </span>
+                      <p class="alert alert-danger" *ngIf="loginForm.controls['email'].hasError('pattern')">
+                            Please enter valid email address.
+                      </p> 
+                    </div>
+                    <div class="form-group">
+                      <label>Password</label>
+                      <input type="password" class="form-control"  maxlength=15 required name="password" formControlName="password" placeholder="Enter your password">
+                      <span *ngIf="password && password.invalid && password.touched" style="color: red;"> Input is not valid</span>
+                       
+                    </div>
+                    <button [disabled]="loginForm.invalid" style="margin-top: 10px;" type="submit" class="btn btn-primary">Login</button>
+                  </form>
+                  <a style="margin-top: 10px;" routerLink="/signup">New User? Click to signup!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class = "footer">
+  <div class = "container">
+      <span>Copyright© BetterReads 2022 | Happy Reading</span>
+  </div>
+</footer>

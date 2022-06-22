@@ -1,0 +1,51 @@
+<div class="col-md-6 offset-md-3">
+      <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card text-black" ><br><br>
+                        <div class="text-center" id="heading">
+                             <strong> <h2 class="create"> Create Book </h2> </strong>
+                        </div>
+                        <div class="center">    
+
+<form [formGroup]="addBookData" (ngSubmit) ="addBook()">
+      <div class="form-group">
+            <label> Book Id </label>
+            <input type="number" class="form-control" id="book_id"
+            formControlName="book_id" placeholder="Enter book id" name="book_id">
+      </div>
+      <div class="form-group">
+            <label>  Title </label>
+            <input type="text" class="form-control" id="title" 
+            formControlName="title" placeholder="Enter book title" name="title">
+      </div>
+      <div class="form-group">
+            <label>  Author </label>
+            <input type="text" class="form-control" id="author" 
+              formControlName="author" placeholder="Enter book author" name="author">
+      </div>
+      <div class="form-group">
+            <label>  Price </label>
+            <input type="number" class="form-control" id="price" 
+            formControlName="price" placeholder="Enter book price" name="price">
+      </div>
+      <div class="form-group">
+            <label>  Genre </label>
+            <input type="text" class="form-control" id="genre" 
+            formControlName="genre" placeholder="Enter book genre" name="genre">
+      </div>
+      <div class="form-group">
+            <label>  Year </label>
+            <input type="number" class="form-control" id="year" 
+            formControlName="year" placeholder="Enter book year" name="year">
+      </div>
+      <button class="btn btn-success" type="submit" style="margin-top: 12px;"> Submit </button>
+</form>
+
+</div>
+</div>
+</div>      
+</div>
+</div>
+</div>
+
